@@ -1,0 +1,118 @@
+.reviews {
+  background: var(--secondary);
+}
+
+.reviews__rating-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.reviews__rating-score {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+}
+
+.reviews__rating-label {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--gray-dark);
+  margin-top: 4px;
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.review-card::before {
+  content: '"';
+  position: absolute;
+  top: 16px; right: 24px;
+  font-family: Georgia, serif;
+  font-size: 6rem;
+  line-height: 1;
+  color: rgba(37,99,235,0.08);
+  pointer-events: none;
+}
+
+.review-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.review-card__top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.review-card__avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.review-card__name {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.review-card__date {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--gray-dark);
+}
+
+.review-card__google {
+  margin-left: auto;
+  color: var(--gray-dark);
+}
+
+.review__stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 16px;
+}
+
+.star-filled { color: #FBBF24; }
+.star-empty { color: var(--gray-dark); }
+
+.review-card__text {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--gray-mid);
+  line-height: 1.75;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .reviews__grid { grid-template-columns: 1fr; }
+  .review-card { padding: 24px 20px; }
+}
