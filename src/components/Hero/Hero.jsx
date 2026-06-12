@@ -34,7 +34,7 @@ export default function Hero() {
         </motion.div> */}
 
         <motion.span className="hero__eyebrow" {...fadeUp(0.2)}>
-          Mahindra Authorised Service Station · Curchorem, Goa
+          Specialist in Mahindra & Other Brands · Curchorem, Goa
         </motion.span>
 
         <motion.h1 className="hero__title" {...fadeUp(0.3)}>
